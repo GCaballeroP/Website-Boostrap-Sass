@@ -1,0 +1,226 @@
+
+
+@mixin btn-base {
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.25rem;
+}
+
+
+@mixin btn-sm-modify {
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+}
+
+$color-main:#0084D4;
+$color-main-s :#E05666;
+$color-btn:#4EC2DF;
+$color-btn-s:#babecb;
+$color-icon:#1DB0C0;
+
+.btn-main {
+    @include btn-base();
+    background-color:  $color-main;
+    color: white;
+    font-size: 0.75rem;
+    border: 1px solid white;
+    // align-items: center;
+    // justify-content: center;
+   
+    // filter:  drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+    &:hover{
+        background-color: white;
+        border: 1px solid $color-main;
+        color: $color-main;
+    }
+}
+
+
+.btn-main-s {
+    @include btn-sm-modify() ;
+    background-color:transparent;
+    color: $color-main;
+    border: 1px solid $color-main;
+    font-size: 0.75rem;
+    // align-items: center;
+    // justify-content: center;
+    // filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+    &:hover {
+        background-color: $color-main;
+        border: 1px solid $color-main;
+        color: white;
+    }
+}
+
+.btn-sec {
+   
+    @include btn-base();
+    background-color: $color-main-s ;
+    color: white;
+    font-size: 0.75rem;
+    border: 1px solid $color-main-s;
+    align-items: center;
+    justify-content: center;
+   
+    // filter:  drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+    &:hover {
+        background-color: white;
+        color: $color-main-s;
+    }
+
+}
+
+.btn-sec-s {
+
+    @include btn-sm-modify() ;
+    background-color:transparent;
+    color: $color-main-s;
+    border: 1px solid $color-main-s;
+    font-size: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    // filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+    &:hover {
+        background-color: $color-main-s;
+        color: white;
+    }
+}
+
+.btn-download {
+    @include btn-base();
+    background-color:  $color-btn;
+    color: white;
+    font-size: 0.90rem;
+    border: 1.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter:drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+    &:hover{
+        background-color: white;
+        color: $color-btn;
+    }
+
+}
+
+.btn-download-s {
+    @include btn-base();
+    background-color:  $color-btn-s;
+    color: white;
+    font-size: 0.90rem;
+    border: 1.5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+    &:hover{
+        background-color: white;
+        color: $color-btn-s;
+    }
+
+}
+
+
+.main-menu{
+
+
+    ul{
+        margin-bottom:0;
+
+        li{
+            list-style: none;
+            font-size: 0.90rem;
+            display: inline;
+            margin-right: 2rem;
+
+        a{
+           text-decoration: none;
+           color: black;
+
+           &:hover{
+            color: $color-main-s;
+            
+           }
+        }
+
+        }
+    
+    }       
+    
+}
+
+.icon-sm{
+i{
+    background-color: $color-icon;
+color: white;
+border-radius: 80%;
+font-size: 1.3rem;
+padding: 0.1rem 0.25rem;
+filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+
+}
+}
+
+.icon-sm-s{
+    i{
+        background-color:$color-main;
+    color: white;
+    border-radius: 80%;
+    font-size: 1.3rem;
+    padding: 0.1rem 0.25rem;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    
+    }
+    i:hover{
+        background-color: $color-main-s;
+    }
+    }
+
+    .benefit {
+
+        display: flex;
+        flex-direction: column;
+
+        i {
+         color: $color-main;
+         padding: 1rem;
+         font-size: 3rem;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+        }
+    
+        .description{
+            h5{
+                // font-size: 2rem;
+                display: flex;
+                justify-content: center
+                
+                
+            }
+    
+        .text{
+            font-weight: 400; 
+            text-align: center;
+        }
+        }
+    
+       }
+
+.main-section {
+    span {
+     
+        // color: $color-main;
+        // background:linear-gradient(80deg,$color-icon, #f9f5f5);
+        background-image: radial-gradient(circle closest-corner at 50% 50%,#0084d4,#76d7f0 36%,#47dfcd 64%,#0084d4);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+    }
+}
+

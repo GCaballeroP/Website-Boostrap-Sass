@@ -1,0 +1,441 @@
+@use "components" ;
+
+@mixin section-display {
+    width:100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+}
+
+@mixin title-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+@mixin style-botton{
+    margin: 0 auto;  
+    text-align: center; 
+    border-radius: 5px;   
+}
+
+@mixin style-cards{
+    padding:60px 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2rem;
+
+}
+
+html {
+    min-width:100vw;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 4rem;
+    border-bottom: solid 1px #ddd;
+
+}
+
+.logo img{
+    max-width: 7rem;
+}
+
+ .main-section {
+    display:flex;
+    align-items: center;
+
+    @include section-display();
+   
+    .main-cta {
+        flex: 1;
+
+        .main-title{
+            font-size: 2.55rem;
+        }
+
+        .home-title{
+            // width: 25rem;
+            font-size: 2.5rem;
+            
+        }
+
+        .home-description {
+            width: 355px;
+
+        }
+        
+    }
+
+    img {
+        width:auto;
+        max-height:100%;
+    }
+}
+
+.sec-sponsors{
+    @include section-display();
+    .title-sponsors {
+        h5{
+            display: flex;
+            justify-content: center;
+            // color: #888;
+
+        }
+    }
+}
+
+    
+
+.sec-overview{
+    @include section-display();
+
+    .title-overview{
+        
+    h2{
+        @include title-sec();
+    }
+
+   p{
+     font: inherit;
+     font-size: 100%;
+   }
+
+    }
+}
+
+.sec-benefits{
+     @include section-display();
+
+     display: flex;
+     flex-direction:column;
+
+    .title-benefits{
+        h2{
+            @include title-sec();
+            text-align: center;
+        }
+    }
+
+    .benefits-cards{
+        width: 100%;
+        padding: 0 2rem 3rem 2rem;
+        
+  
+        
+    }
+}
+
+.section-button, .section-button-explorer,.section-button-learn{
+    @include section-display();
+
+.section-button-s{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .btn-main-s,.btn-main{
+        width: 9rem;
+        height: 2.5rem;
+    }
+      
+    }
+}
+
+.section-ux{
+     @include section-display();
+    
+    .title-ux{
+        h2 {
+            @include title-sec();
+        }
+    }
+
+    .section-wrapper{
+     display: flex;
+
+    .container-wrapper{
+    
+    width:25%;
+    padding: 1rem;
+    
+
+ 
+   }  
+
+    
+   
+
+ }
+    }
+
+  
+   
+.section-ful{
+    @include section-display();
+    h2{
+        @include title-sec();
+       
+    }
+ 
+    .cards-container{
+        @include style-cards();
+     
+        background-color: components.$color-icon;
+   
+    h3,p{
+        color: white;
+    }
+
+  
+  .btn-download {
+    
+    @include style-botton();
+
+    i{
+        margin: 5px;
+    }
+  }
+
+
+    }
+
+.cards-container-s{
+    
+    @include style-cards();
+    margin-top: 1rem;
+    
+    background-color: components.$color-btn-s;
+
+    h3,p{
+        color: white;
+    }
+
+   .btn-download-s{
+    
+     @include style-botton();
+
+     i{
+        margin: 5px;
+    }
+ }
+
+    }
+}
+
+
+.section-button-learn{
+     @include section-display();
+
+     .section-button-s{
+   
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+     }
+
+}
+
+ .section-footer{
+
+  background-color: components.$color-main;
+  padding-top: 5rem;
+ 
+    .footer-cta {
+     
+      .footer-title{
+        padding: 1rem;
+        color: white;
+        border-bottom: solid 1px #ddd;
+        
+      }
+  
+      
+        .cta-description {
+          font-size: 1.1rem;
+          color: white;
+          border-bottom: solid 1px #ddd;
+        
+          p{
+            padding:0.95rem 0.95rem;
+          }
+        
+
+        .icon-sm-s{
+        display: flex;
+        justify-content: flex-start;
+        padding: 0.50rem;
+        i{
+            
+            margin:8px;
+            
+        }
+    }
+}
+}
+ }
+
+
+  //Section main-section//
+ @media (max-width:768px){
+    .main-section{
+        flex-direction: column;
+     
+        .main-cta{
+       
+            .main-title,.home-title,.home-description{
+            width: 100%;
+            text-align: center;
+            }
+
+      
+        .button{
+            
+            .btn-main,.btn-main-s{
+            display:flex;
+            align-items: center;
+            margin:0 auto;
+            margin-top: 0.70rem;
+            }
+        }
+        }
+    }
+ }
+
+
+ //Section footer//
+@media (max-width: 768px) {
+    .section-footer{
+        // flex-direction: column;
+      
+        background-image: none;
+      
+
+
+        .footer-cta{
+
+            flex-direction: column;
+            width: auto;
+
+          .footer-title{
+        
+            h4{
+               
+                text-align: center;
+             
+            }
+            p{
+                text-align: center;
+            }
+
+            .btn-main{
+                margin:auto;
+                display:flex;
+                align-items: center;
+               
+            }
+          }
+
+          .cta-description{
+            p{
+                text-align: center;
+            }
+
+            .icon-sm-s{
+                 display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+          }
+        }
+    }
+}
+
+
+ //Section sec-sponsors//
+@media (max-width: 768px) {
+    .sec-sponsors{
+        
+        flex-direction: column;
+        // flex-direction: column;
+        .title-sponsors {
+           
+            text-align: center;
+            
+        }
+            
+            
+            }
+        }
+
+ //Section ful//
+@media (max-width: 768px) {
+
+    .section-ful{
+        flex-direction: column;
+        width: 100%;
+
+        .title-helpful{
+            h2{
+                text-align: center;
+            }
+        }
+
+        .cards-container,.cards-container-s{
+            h3,p{
+                text-align: center;
+            }
+        }
+    }
+}
+
+ //Section button learn//
+@media (max-width: 768px) {
+    .section-button-learn{
+        h2{
+            text-align: center;
+        }
+    }
+}
+
+ //Section sec-benefits//
+
+@media (max-width:768px){
+    .sect-benefits{
+        flex-direction:column;
+        width: 100%;
+        .title-benefits{
+            h2{
+                text-align: center;
+                margin: auto;
+            }
+        }
+        .benefits-cards{
+            .benefit{
+                i{
+                  align-items: center;
+                }
+                .description{
+                    h5{
+                     text-align: center;
+                    }
+
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
